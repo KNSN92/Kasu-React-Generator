@@ -109,7 +109,7 @@ export function KasuReactDownload({
             <Input
               type="range"
               id="durationSec"
-              min={0}
+              min={0.1}
               max={60}
               step={0.1}
               value={videoExportOptions.durationSec}
