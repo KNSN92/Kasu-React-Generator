@@ -49,6 +49,13 @@ const VideoFormat2Ext: Record<VideoFormat, string> = {
   "video/webm": "webm",
 };
 
+type Codec = "avc" | "vp9" | "hevc" | "av1" | "vp8";
+
+const VideoFormat2Codec: Record<VideoFormat, Codec> = {
+  "video/mp4": "avc",
+  "video/webm": "vp9",
+};
+
 export interface VideoExportOptions {
   durationSec: number;
   fps: number;
@@ -283,7 +290,7 @@ async function downloadKasuReactVideo(
     target: new BufferTarget(),
   });
   const canvasSource = new CanvasSource(canvas, {
-    codec: "avc",
+    codec: VideoFormat2Codec[format],
     latencyMode: "quality",
     bitrate: QUALITY_MEDIUM,
   });
