@@ -17,6 +17,8 @@ import {
 import { KasuReactDownload } from "./components/KasuReactDownload";
 import { KasuBaseEditor } from "./components/KasuBaseEditor";
 
+import icon from "/icon.svg";
+
 export function App() {
   const [baseConfig, setBaseConfig] = useState<KasuBaseConfig>({
     bg_color: "#000000",
@@ -79,7 +81,7 @@ export function App() {
       <header className="w-full mt-8 flex justify-between">
         <div className="flex items-center">
           <img
-            src="/icon.svg"
+            src={icon}
             alt="Kasu React Generator Icon"
             className="inline w-16 mr-2"
           />
