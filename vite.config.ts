@@ -5,7 +5,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/KasuReact/",
+  base: "/Kasu-React-Generator/",
   plugins: [
     react({
       babel: {
